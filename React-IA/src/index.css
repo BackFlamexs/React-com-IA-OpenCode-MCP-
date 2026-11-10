@@ -8,20 +8,32 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
-/* Fundo da página: imagens do Figma (mobile até 767px, desktop a partir de 768px) */
 body {
   min-height: 100vh;
-  background: #fff url("./assets/bg-mobile-light.png") center / cover no-repeat fixed;
+  background-color: #fff;
 }
 .dark body {
   background-color: #121214;
+}
+
+/* Fundo: imagens do Figma (mobile até 767px, desktop a partir de 768px).
+   O hue-rotate troca o rosa do Figma por azul, a pedido do usuário. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url("./assets/bg-mobile-light.png") center / cover no-repeat;
+  filter: hue-rotate(-70deg);
+}
+.dark body::before {
   background-image: url("./assets/bg-mobile-dark.png");
 }
 @media (min-width: 768px) {
-  body {
+  body::before {
     background-image: url("./assets/bg-desktop-light.png");
   }
-  .dark body {
+  .dark body::before {
     background-image: url("./assets/bg-desktop-dark.png");
   }
 }
