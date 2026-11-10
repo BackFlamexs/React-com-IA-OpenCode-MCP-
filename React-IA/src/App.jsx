@@ -24,7 +24,7 @@ export default function App() {
 
         <SocialLinks networks={socials} />
       </main>
-      <Footer />
+      <Footer author={user.fullName} />
     </div>
   )
 }
