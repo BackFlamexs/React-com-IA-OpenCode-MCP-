@@ -7,11 +7,13 @@ import ThemeToggle from './components/ThemeToggle'
 import Footer from './components/Footer'
 
 export default function App() {
-  const [isDark, setIsDark] = useState(false)
+  // Começa com o tema salvo da última visita (claro se não houver nenhum)
+  const [isDark, setIsDark] = useState(() => localStorage.getItem('theme') === 'dark')
 
   // A classe .dark no <html> ativa as variantes dark: do Tailwind e o fundo escuro
   useEffect(() => {
     document.documentElement.classList.toggle('dark', isDark)
+    localStorage.setItem('theme', isDark ? 'dark' : 'light')
   }, [isDark])
 
   return (
