@@ -15,9 +15,9 @@ export const user = {
   avatar,
 }
 
-// TODO: trocar pelos endereços reais do curso, e-book e portfólio
+// TODO: trocar pelos endereços reais do e-book, portfólio e curso
 export const links = [
-  { id: 'curso', label: 'Inscreva-se no Curso', href: '#' },
+  { id: 'github', label: 'GitHub', href: 'https://github.com/BackFlamexs' },
   { id: 'ebook', label: 'Baixe meu e-book', href: '#' },
   { id: 'portfolio', label: 'Veja meu portfólio', href: '#' },
   { id: 'conheca-curso', label: 'Conheça meu curso', href: '#' },
