@@ -5,6 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DevLinks</title>
+    <!-- Aplica o tema salvo antes da primeira pintura, para não piscar o tema claro -->
+    <script>document.documentElement.classList.toggle('dark', localStorage.getItem('theme') === 'dark')</script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
