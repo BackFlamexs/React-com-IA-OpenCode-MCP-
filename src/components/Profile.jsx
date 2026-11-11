@@ -1,8 +1,10 @@
-// Avatar e nome do usuário.
+import ThemeImage from './ThemeImage'
+
+// Avatar (uma foto para cada tema) e nome do usuário.
 export default function Profile({ avatar, name }) {
   return (
     <header className="flex w-full flex-col items-center gap-2 p-6">
-      <img
+      <ThemeImage
         src={avatar}
         alt={`Foto de ${name}`}
         className="size-28 rounded-full border border-black/50 object-cover object-[50%_40%] dark:border-white/50"

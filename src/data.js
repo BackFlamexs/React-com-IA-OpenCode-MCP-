@@ -1,4 +1,5 @@
 import avatar from './assets/avatar.jpg'
+import avatarDark from './assets/avatar-dark.png'
 import githubLight from './assets/github-light.svg'
 import githubDark from './assets/github-dark.svg'
 import instagramLight from './assets/instagram-light.svg'
@@ -12,7 +13,7 @@ import linkedinDark from './assets/linkedin-dark.svg'
 export const user = {
   name: '@BackFlamexs',
   fullName: 'Allan Henrique Costa',
-  avatar,
+  avatar: { light: avatar, dark: avatarDark },
 }
 
 // TODO: trocar pelos endereços reais do e-book, portfólio e curso
